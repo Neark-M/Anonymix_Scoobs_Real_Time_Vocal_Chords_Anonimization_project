@@ -2,21 +2,21 @@
 
 Anonymix Scoobs is an experimental Windows application for live voice effects, recording, playback, and audio visualization. It began as a capstone project for exploring audio processing and has continued as a personal software project. Its audio features run locally and do not require an internet connection.
 
-**Current version: V1.7.** The application is a creative tool and a learning project. It has not been validated as a voice anonymization system. Do not rely on it to conceal your identity in a sensitive situation.
+**Current version: V1.8.** The application is a creative tool and a learning project. It has not been validated as a voice anonymization system. Do not rely on it to conceal your identity in a sensitive situation.
 
 ## Download and run
 
-Download the Windows x64 application from the [V1.7 release](https://github.com/Yacos-MA/Anonymix_Scoobs_Real_Time_Vocal_Chords_Anonimization_project/releases/tag/v1.7). Extract the entire application ZIP into a writable folder before running the executable. Keep the supplied DLLs, icon, and third-party notices with the application.
+Download the Windows x64 application from the [V1.8 release](https://github.com/Yacos-MA/Anonymix_Scoobs_Real_Time_Vocal_Chords_Anonimization_project/releases/tag/v1.8). Extract the entire application ZIP into a writable folder before running the executable. Keep the supplied DLLs, icon, and third-party notices with the application.
 
-Earlier releases remain available on the [Releases page](https://github.com/Yacos-MA/Anonymix_Scoobs_Real_Time_Vocal_Chords_Anonimization_project/releases). The source archive is for development; it is not itself a ready-to-run Windows application.
+Earlier versions remain available on the [Releases page](https://github.com/Yacos-MA/Anonymix_Scoobs_Real_Time_Vocal_Chords_Anonimization_project/releases). The source files in this repository are for development; they are not themselves a ready-to-run Windows application.
 
 ## Features
 
 - **Live voice processing:** Stream mode captures microphone audio, applies the selected effects, and sends it to the active audio output.
-- **Recording and playback:** Recording mode captures a take. One Play button plays it with the currently selected effects; one Save WAV button exports it. Effects can be combined. During playback, sliders and selections can change; Save WAV captures their values when it is pressed.
+- **Recording and playback:** Recording mode captures a take. One Play button plays it with the currently selected effects; one Save WAV button exports it. Effects can be combined. During playback, sliders and selections can change; Save WAV captures their values when pressed.
 - **Voice effects:** Pitch, the transformation labelled Formant, Timbre, Prosody, and Jitter each have a selection button and a slider.
-- **Audio devices:** PortAudio uses Windows WASAPI. The interface offers Shared and Exclusive modes, with a fallback if the requested mode cannot be opened. Reopen Audio requests device discovery after a microphone or output change without stopping the visual loop. Exclusive mode may prevent other applications from using the same audio device.
-- **Visuals:** SDL3 displays a waveform, an FFT spectrum covering approximately 20 Hz to 20 kHz, and animated interface elements. The interface targets 60 frames per second; actual delivery depends on the computer and drivers.
+- **Audio devices:** PortAudio uses Windows WASAPI. The interface offers Shared and Exclusive modes, with a fallback if the requested mode cannot be opened. Reopen Audio requests device discovery after a microphone or output change. Exclusive mode may prevent other applications from using the same audio device.
+- **Visuals:** SDL3 displays a waveform, an FFT spectrum covering approximately 20 Hz to 20 kHz, and animated interface elements. The window can be resized within its minimum dimensions. The interface targets 60 frames per second and can reduce visual work in steps when under sustained load; actual performance depends on the computer and drivers.
 
 Capture, DSP, playback, and WAV export use **48 kHz** inside the application. There is no internal 48-to-16-to-48 kHz conversion path. Windows Shared mode or device drivers may still resample outside the application. A particular microphone-to-speaker latency is not guaranteed on every computer.
 
@@ -28,13 +28,13 @@ These effects change how a voice sounds, but their effectiveness against speaker
 
 ## Build from source
 
-The Windows source set targets **Visual Studio Community 2026**, **x64**, and **C++20**. The application uses **SDL3** for the interface, **SDL3_ttf** for text, and **PortAudio** for audio. The official V1.7 build does not require JUCE.
+The Windows source set targets **Visual Studio Community 2026**, **x64**, and **C++20**. The application uses **SDL3** for the interface, **SDL3_ttf** for text, and **PortAudio** for audio. The official V1.8 build does not require JUCE.
 
-The [V1.7 publication sources](V1.7/Anonymix_Scoobs_V1.7_Publication_Clean/) contain the application's `.cpp` and `.h` files, a [code map](V1.7/Anonymix_Scoobs_V1.7_Publication_Clean/CODE_MAP.md), and [build and release instructions](V1.7/Anonymix_Scoobs_V1.7_Publication_Clean/BUILD_AND_RELEASE.md). They do not contain a Visual Studio solution or a prebuilt executable. To compile them, use a Visual Studio project with suitable dependency headers, import libraries, and linker settings.
+The [V1.8 publication sources](V1.8/Anonymix_Scoobs_V1.8_Publication_Silent_Windows_Source/) contain the application's `.cpp` and `.h` files, a [code map](V1.8/Anonymix_Scoobs_V1.8_Publication_Silent_Windows_Source/CODE_MAP.md), and [build and test instructions](V1.8/Anonymix_Scoobs_V1.8_Publication_Silent_Windows_Source/BUILD_AND_TEST.md). They do not contain a Visual Studio solution or a prebuilt executable. To compile them, use a Visual Studio project with suitable dependency headers, import libraries, and linker settings.
 
-The supplied runtime package includes SDL3 3.4.16, SDL3_ttf 3.2.2, and the PortAudio DLL carried forward from the earlier Windows packages. Keep `runtime/THIRD_PARTY_NOTICES.txt` and `runtime/LICENSES/` with distributed third-party DLLs. The published V1.7 source variant omits runtime diagnostic output. A separate development baseline retains diagnostics for future work.
+The supplied runtime package includes SDL3 3.4.16, SDL3_ttf 3.2.2, and the PortAudio DLL carried forward from the earlier Windows packages. Keep `runtime/THIRD_PARTY_NOTICES.txt` and `runtime/LICENSES/` with distributed third-party DLLs. The published V1.8 source variant omits application diagnostic output. A separate development baseline retains diagnostics for future work.
 
-The [V1.5 sources and build notes](V1.5/Anonymix_Scoobs_V1.5_Dev/BUILD_AND_TEST.md) document the preceding version.
+The [V1.7 sources](V1.7/Anonymix_Scoobs_V1.7_Publication_Clean/) and [V1.5 build notes](V1.5/Anonymix_Scoobs_V1.5_Dev/BUILD_AND_TEST.md) document earlier versions.
 
 ## Project history and plans
 
@@ -45,6 +45,7 @@ The [V1.5 sources and build notes](V1.5/Anonymix_Scoobs_V1.5_Dev/BUILD_AND_TEST.
 | V1.2 | 48 kHz application processing and experiments with JUCE and PortAudio. The official application continued with PortAudio for audio and SDL3 for the interface. |
 | V1.5 | Unified playback and WAV export, selectable and combinable effects, prosody and jitter, updated visuals, and the same formant-labelled processing path for Stream and Recording modes. |
 | V1.7 | WASAPI Shared/Exclusive selection, capture-level correction, recording collection outside the audio callback, audio-chain refinements, asynchronous device reopening, and interface scheduling improvements. |
+| V1.8 | Additional asynchronous and preloaded work, adaptive visual scheduling, resizable window, and refined FFT and rotated-shape rendering. The publication build omits application diagnostics. |
 
 **V2.0** may move substantial parts of the application to Rust if measurements and development show a clear benefit. Its scope and architecture will follow the results of that work. No release date has been set.
 
