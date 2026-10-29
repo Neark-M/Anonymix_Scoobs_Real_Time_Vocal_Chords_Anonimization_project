@@ -1,0 +1,46 @@
+{
+  "product": "Anonymix Scoobs V1.8 Rust port",
+  "variant": "publication",
+  "documented_named_public_types_and_functions": 304,
+  "scope": "Built Rust source, tests, API documentation and safety notes; frozen historical references are unchanged.",
+  "language_review": "English source comments, API documentation, code map and project READMEs reviewed. Identifiers retain the English baseline.",
+  "validation_reports": {
+    "V18_RUST_TEST_LINUX.txt": {
+      "checks": 62,
+      "sha256": "16efa58872c659e1667739af852b5bdcd3915039d7c0b44737488f1b2aca53f7"
+    },
+    "V18_RUST_TEST_RELEASE_LINUX.txt": {
+      "checks": 62,
+      "sha256": "49717c26d4929618bcf19920d9bc19e00aef86ae24bf6e7b8d55c28fcd7a8283"
+    },
+    "V18_RUST_BUILD_LINUX.txt": {
+      "checks": 0,
+      "sha256": "376a48f02bf305a0c383aa68e8f2d8c5df3ec64cbee6a09491a649aa453baba9"
+    },
+    "V18_RUST_DOC_LINUX.txt": {
+      "checks": 0,
+      "sha256": "46c7f47f1f2218e21ed8fdb8c3b7388ac11a41501cc4fddc860b3b42dbde672e"
+    },
+    "V18_RUST_NATIVE_ADAPTED.txt": {
+      "checks": 14,
+      "sha256": "20a56cad2d38f7be4e49a73f2870655aec3a6c78ecd3b64784cc6176335a6b54"
+    }
+  },
+  "windows_check_count_expected": 67,
+  "new_windows_binary_built_here": false,
+  "windows_packaging_script_executed_here": false,
+  "user_evidence": "User supplied successful stage-9 Windows tests/build screenshots and reported some manual tests OK.",
+  "private_v182_changes_included": false,
+  "native_runtime_sha256": {
+    "SDL3.dll": "1f98969319302a100931f4385e5918a0bd53ab07773040682d22e7edb54858c0",
+    "portaudio.dll": "6197d9fc3f448af9581e569eb135ae743ec5d7f71651e7d4aa644f9630b20f53",
+    "THIRD_PARTY_NOTICES.txt": "d985fc7149a7f5e724bd5abe5f6587536a7ad84f6f6eb2255c9a440a0fae7ae9",
+    "logo.bmp": "ed87b6f18d52d7513f4e6af858225aed17c46328cf9e56544c4c0e6b0cfca6ab",
+    "SDL3_ttf.dll": "95a20af07f194f057b6e778bee0ce608d3c90c3dbd64a4b5120dc4879f43a6be",
+    "LICENSES/SDL3_ttf_README.md": "e9a8a9a696c453b304777c7d3879caa801b215755889200bf17f259b6ef5534d",
+    "LICENSES/SDL3_ttf_LICENSE.txt": "7826eca0a0f7e591f38dd844e207a200aac81a59b20d8a30c3af8c6282af13e6",
+    "LICENSES/PortAudio_vcpkg_copyright_original.txt": "ec52a1952d701f94e5135719a47376da4ee0b4a0201f1cafb49f61db6480ac3d",
+    "LICENSES/SDL3_LICENSE.txt": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd",
+    "LICENSES/PortAudio_LICENSE.txt": "c9376afcff444adad75a5530952303ddef6a0ba2c8128a365be8f64b3873791d"
+  }
+}

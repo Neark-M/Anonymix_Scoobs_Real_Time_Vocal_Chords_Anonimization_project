@@ -1,0 +1,42 @@
+[
+  {
+    "window": [
+      960,
+      650
+    ],
+    "differing_pixels": 15,
+    "maximum_channel_difference": 1,
+    "mean_channel_difference": 1.7628205128205127e-05,
+    "bbox": [
+      62,
+      333,
+      664,
+      519
+    ]
+  },
+  {
+    "window": [
+      1430,
+      1030
+    ],
+    "differing_pixels": 0,
+    "maximum_channel_difference": 0,
+    "mean_channel_difference": 0.0,
+    "bbox": null
+  },
+  {
+    "window": [
+      1920,
+      1040
+    ],
+    "differing_pixels": 499945,
+    "maximum_channel_difference": 255,
+    "mean_channel_difference": 36.40869174011752,
+    "bbox": [
+      0,
+      0,
+      1920,
+      1040
+    ]
+  }
+]

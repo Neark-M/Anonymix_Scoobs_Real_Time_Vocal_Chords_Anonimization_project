@@ -1,0 +1,19 @@
+[package]
+name = "anonymix-v18-dsp-port"
+version = "1.8.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+autobins = false
+default-run = "anonymix-scoobs"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "anonymix-scoobs"
+path = "src/bin/anonymix-scoobs.rs"
+
+[profile.release]
+# Keep ordinary IEEE operations: no fast-math or explicit fused arithmetic.
+opt-level = 3
